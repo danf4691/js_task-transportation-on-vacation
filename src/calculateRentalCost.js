@@ -11,12 +11,12 @@ const MEDIUM_TERM_DISCOUNT = 20;
 const LONG_TERM_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  if (days >= SMALL_TERM) {
-    return days * DAILY_RATE - MEDIUM_TERM_DISCOUNT;
-  }
-
   if (days >= LONG_TERM) {
     return days * DAILY_RATE - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= SMALL_TERM) {
+    return days * DAILY_RATE - MEDIUM_TERM_DISCOUNT;
   }
 
   return days * DAILY_RATE;
